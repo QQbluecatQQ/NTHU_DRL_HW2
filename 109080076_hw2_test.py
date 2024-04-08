@@ -70,7 +70,8 @@ class Mario():
         checkpoint = torch.load(path,map_location=self.device)
         self.net.online.load_state_dict(checkpoint['model'])
         self.net.target.load_state_dict(checkpoint['model'])
-        self.explore = checkpoint['exp']
+        # self.explore = checkpoint['exp']
+        # self.explore = 0.3
         print(f"load model from {path} explore rate {self.explore}")
         
         
@@ -83,7 +84,8 @@ class Agent():
         self.count_frame = 0
         self.lastaction = 0
     def act(self, observation):
-        if self.count_frame < 2:
+        # 2 似乎也不錯
+        if self.count_frame < 3:
             self.count_frame = self.count_frame+1
             return self.lastaction
         else:
