@@ -83,7 +83,7 @@ class Agent():
         self.count_frame = 0
         self.lastaction = 0
     def act(self, observation):
-        if self.count_frame < 4:
+        if self.count_frame < 2:
             self.count_frame = self.count_frame+1
             return self.lastaction
         else:
