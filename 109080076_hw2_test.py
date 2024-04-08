@@ -96,7 +96,7 @@ class Agent():
         # state = self.preprocess(observation)
         # action = self.player.act(state)
         # return  action
-    
+
     def preprocess(self, observation):
         # gray scale and resize
         observation = cv2.cvtColor(observation, cv2.COLOR_RGB2GRAY)
