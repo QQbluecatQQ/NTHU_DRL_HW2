@@ -70,7 +70,7 @@ class Mario():
         checkpoint = torch.load(path,map_location=self.device)
         self.net.online.load_state_dict(checkpoint['model'])
         self.net.target.load_state_dict(checkpoint['model'])
-        # self.explore = checkpoint['exp']
+        self.explore = checkpoint['exp']
         # self.explore = 0.3
         print(f"load model from {path} explore rate {self.explore}")
         
