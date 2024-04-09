@@ -72,8 +72,8 @@ class Mario():
         self.net.online.eval()
         self.net.target.load_state_dict(checkpoint['model'])
         self.net.target.eval()
-        # self.explore = checkpoint['exp']
-        self.explore = 0.3
+        self.explore = checkpoint['exp']
+        # self.explore = 0.3
         print(f"load model from {path} explore rate {self.explore}")
         
         
