@@ -85,6 +85,7 @@ class Agent():
         self.stack = np.zeros((4,84,84),dtype=np.float32)
         self.count_frame = 0
         self.lastaction = 0
+
     def act(self, observation):
         # 2 似乎也不錯
         # if self.count_frame < 2:
